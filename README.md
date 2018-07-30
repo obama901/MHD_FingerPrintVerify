@@ -41,6 +41,7 @@ referenceMsg就是可以提供参考的错误信息的中文提示,可以用也�
 # 感谢
 
 * 谢谢使用此库
-* 另外,demo中还使用了另外一个库https://github.com/obama901/MHD_Category,来构建按钮等控件的一些属性.
+* 另外,demo中还使用了另外一个库https://github.com/obama901/MHD_Category 
+ 来构建按钮等控件的一些属性.
 
 

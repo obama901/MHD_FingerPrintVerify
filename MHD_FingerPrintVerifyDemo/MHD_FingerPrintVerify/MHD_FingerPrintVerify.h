@@ -13,13 +13,13 @@
  错误码说明:
 
  -1.LAErrorAuthenticationFailed:授权失败
- -2.LAErrorUserCancel:用户取消验证Touch ID
- -3.LAErrorUserFallback:***指纹验证失败,用户选择了'fallBackTitle'标题下的选项***
+ -2.LAErrorUserCancel:用户取消验证Touch ID/Face ID
+ -3.LAErrorUserFallback:***指纹/面容验证失败,用户选择了'fallBackTitle'标题下的选项***
  -4.LAErrorSystemCancel:系统取消授权，如其他APP切入
  -5.LAErrorPasscodeNotSet:系统未设置密码
- -6.LAErrorTouchIDNotAvailable:设备Touch ID不可用，例如未打开
- -7.LAErrorTouchIDNotEnrolled:设备Touch ID不可用，用户未录入
- -8.LAErrorTouchIDLockout:身份验证未成功,多次使用Touch ID失败
+ -6.LAErrorBiometryNotAvailable:设备Touch ID/Face ID不可用，例如未打开
+ -7.LAErrorBiometryNotEnrolled:设备Touch ID/Face ID不可用，用户未录入
+ -8.LAErrorBiometryLockout:身份验证未成功,多次使用Touch ID/Face ID失败
  -9.LAErrorAppCancel:认证被取消的应用
  -10.LAErrorInvalidContext:授权对象失效
  -1004.LAErrorNotInteractive:APP未完全启动,调用失败
@@ -32,11 +32,11 @@
  */
 
 /**
- 调用系统指纹验证
+ 调用系统指纹/面容验证
 
- @param fallBackTitle 指纹错误后出现的可选标题
- @param reasonTitle 指纹验证框上面的文字提示
- @param fingerBlock 指纹验证成功与否的回调
+ @param fallBackTitle 指纹/面容错误后出现的可选标题
+ @param reasonTitle 指纹/面容验证框上面的文字提示
+ @param fingerBlock 指纹/面容验证成功与否的回调
     isSuccess 验证是否成功
     error 验证的错误信息
     referenceMsg 参考信息

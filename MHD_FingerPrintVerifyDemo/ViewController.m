@@ -47,7 +47,7 @@
 {
     if (!_referenceBtn) {
         _referenceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_referenceBtn mhd_buttonWithTitle:@"点击验证指纹" backColor:[UIColor colorWithRed:0/255.0 green:204/255.0 blue:173/255.0 alpha:1] font:17 titleColor:[UIColor whiteColor] cornerRadius:5];
+        [_referenceBtn mhd_buttonWithTitle:@"点击验证指纹/面容" backColor:[UIColor colorWithRed:0/255.0 green:204/255.0 blue:173/255.0 alpha:1] font:17 titleColor:[UIColor whiteColor] cornerRadius:5];
         _referenceBtn.bounds = CGRectMake(0, 0, MAIN_SIZE.width/2, 30);
         _referenceBtn.center = CGPointMake(self.view.center.x, _fingerPrintIcon.center.y+MAIN_SIZE.height/8);
         _referenceBtn.titleLabel.adjustsFontSizeToFitWidth = true;
@@ -58,7 +58,7 @@
 }
 - (void)referenceBtnAction:(UIButton *)btn
 {
-    [MHD_FingerPrintVerify mhd_fingerPrintLocalAuthenticationFallBackTitle:@"MHD_不玩了" localizedReason:@"MHD_一键指纹" callBack:^(BOOL isSuccess, NSError * _Nullable error, NSString *referenceMsg) {
+    [MHD_FingerPrintVerify mhd_fingerPrintLocalAuthenticationFallBackTitle:@"MHD_不玩了" localizedReason:@"MHD_一键指纹/面容" callBack:^(BOOL isSuccess, NSError * _Nullable error, NSString *referenceMsg) {
         [btn setTitle:referenceMsg forState:UIControlStateNormal];
     }];
 }
